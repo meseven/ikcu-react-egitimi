@@ -1,0 +1,8 @@
+p.myParagraph {
+	border: dashed 2px red;
+}
+
+div.name {
+	padding: 20px;
+	background-color: green;
+}

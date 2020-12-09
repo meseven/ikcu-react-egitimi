@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import Paragraf from './Paragraf' 
+import Paragraf from '../Paragraf' 
 
 function Counter() {
 	const [paragraphText, setParagraphText] = useState('lorem ipsum doler')
