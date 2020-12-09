@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
+import Paragraf from './Paragraf' 
+
 function Counter() {
+	const [paragraphText, setParagraphText] = useState('lorem ipsum doler')
 	const [user, setUser] = useState({ name: 'burak', age: 29 });
 
 	const [count, setCount] = useState(0);
@@ -12,16 +15,20 @@ function Counter() {
 		}
 	};
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCount((count) => count + 1);
-		}, 1000);
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		setCount((count) => count + 1);
+	// 	}, 1000);
 
-		return () => clearInterval(interval);
-	}, []);
+	// 	return () => clearInterval(interval);
+	// }, []);
 
 	useEffect(() => {
 		console.log('count state değişti');
+
+		if (count > 5) {
+			setParagraphText('Bu yeni bir paragraf yazısı.')
+		}
 	}, [count]);
 
 	return (
@@ -39,6 +46,8 @@ function Counter() {
 				value="Change user state"
 				onClick={() => setUser({ ...user, name: 'Mehmet' })}
 			/>
+
+			<Paragraf text={paragraphText} />
 		</div>
 	);
 }
