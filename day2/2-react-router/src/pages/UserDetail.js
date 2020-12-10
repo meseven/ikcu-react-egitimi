@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Redirect } from "react-router-dom";
 
 function UserDetail() {
 	const { id } = useParams();
@@ -15,8 +15,20 @@ function UserDetail() {
 			.finally(() => setLoading(false));
 	}, []);
 
+	if (id == 1) {
+		return (
+			<Redirect
+				to={{
+					pathname: "/",
+				}}
+			/>
+		);
+	}
+
 	return (
 		<div style={{ padding: 10 }}>
+			{loading && <div>Loading...</div>}
+
 			<h2>{user.name}</h2>
 			{user.id}
 		</div>

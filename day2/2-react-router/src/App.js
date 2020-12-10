@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Users from "./pages/Users";
 import UserDetail from "./pages/UserDetail";
 import About from "./pages/About";
+import Error404 from "./pages/Error404";
 
 function App() {
 	return (
@@ -32,6 +33,7 @@ function App() {
 						<Route path="/about" component={About} />
 						<Route path="/users" exact component={Users} />
 						<Route path="/users/:id" component={UserDetail} />
+						<Route path="*" component={Error404} />
 					</Switch>
 				</div>
 			</Router>
