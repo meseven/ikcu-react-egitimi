@@ -4,14 +4,16 @@ import UserContext from "../contexts/UserContext";
 import ListItem from "./ListItem";
 
 function List() {
-	const { users } = useContext(UserContext);
+	const { filteredUsers, users } = useContext(UserContext);
 
+	console.log(filteredUsers);
 	console.log(users);
+	
 
 	return (
 		<div>
 			<ul style={{ padding: 0 }}>
-				{users.map((user, i) => (
+				{filteredUsers.map((user, i) => (
 					<ListItem key={i} user={user} />
 				))}
 			</ul>

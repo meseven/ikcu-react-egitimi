@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import UserContext from "../contexts/UserContext";
 
@@ -8,7 +9,7 @@ function NewUserForm() {
 	const [name, setName] = useState("");
 
 	const handleClick = () => {
-		setUsers([...users, { name }]);
+		setUsers([...users, { id: uuidv4(), name }]);
 	};
 
 	useEffect(() => {

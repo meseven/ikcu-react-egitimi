@@ -1,5 +1,7 @@
 import React, { createContext, useState } from "react";
 
+import { v4 as uuidv4 } from "uuid";
+
 const UserContext = createContext(null);
 
 export const UserProvider = ({ children }) => {
@@ -7,16 +9,23 @@ export const UserProvider = ({ children }) => {
 
 	const [users, setUsers] = useState([
 		{
+			id: uuidv4(),
 			name: "Burak",
 		},
 		{
+			id: uuidv4(),
 			name: "Filiz",
+		},
+		{
+			id: uuidv4(),
+			name: "Batu",
 		},
 	]);
 
 	const values = {
-		users: users.filter((data) =>
-			data.name.toLocaleLowerCase().includes(filter)
+		users,
+		filteredUsers: users.filter((data) =>
+			data.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
 		),
 		setUsers,
 		filter,
