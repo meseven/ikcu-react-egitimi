@@ -4,11 +4,7 @@ import UserContext from "../contexts/UserContext";
 import ListItem from "./ListItem";
 
 function List() {
-	const { filteredUsers, users } = useContext(UserContext);
-
-	console.log(filteredUsers);
-	console.log(users);
-	
+	const { filteredUsers } = useContext(UserContext);
 
 	return (
 		<div>
