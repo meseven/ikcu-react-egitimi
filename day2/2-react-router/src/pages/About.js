@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import { useLocation } from "react-router-dom";
 
-function About() {
-	return (
-		<div>
-			about page
-		</div>
-	)
+function useQuery() {
+	return new URLSearchParams(useLocation().search);
 }
 
-export default About
+function About() {
+	const query = useQuery();
+
+	const lang = query.get("lang");
+	console.log(lang);
+
+	return <div>about page</div>;
+}
+
+export default About;
