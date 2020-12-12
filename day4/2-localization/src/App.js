@@ -13,7 +13,6 @@ import Header from "./components/Header";
 function App() {
 	const lsLocale = localStorage.getItem("locale");
 	const defaultLocale = lsLocale ? lsLocale : navigator.language;
-	
 	const [locale, setLocale] = useState(defaultLocale);
 
 	const changeLocale = (locale) => {
