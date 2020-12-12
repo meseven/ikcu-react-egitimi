@@ -1,0 +1,4 @@
+#Sat Dec 12 16:21:30 EET 2020
+base.0=/Users/mseven/Desktop/app/ikcu-react-egitimi/days/day4/AwesomeProject/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
