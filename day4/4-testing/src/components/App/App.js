@@ -1,8 +1,13 @@
 import "./App.css";
 
+import Counter from "../Counter/Counter";
+
 function App() {
 	return (
 		<div className="App">
+			<Counter />
+			<hr />
+
 			<header className="App-header">
 				<p>
 					Edit <code>src/App.js</code> and save to reload.
