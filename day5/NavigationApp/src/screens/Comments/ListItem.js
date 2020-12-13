@@ -3,12 +3,13 @@ import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
 
-const ListItem = ({comment}) => {
+const ListItem = ({comment, refreshing}) => {
 	const navigation = useNavigation();
 
 	return (
 		<TouchableOpacity
 			style={styles.item}
+			disabled={refreshing}
 			onPress={() => navigation.navigate('CommentDetail', {comment})}>
 			<Text numberOfLines={1} style={styles.title}>
 				{comment.name}
