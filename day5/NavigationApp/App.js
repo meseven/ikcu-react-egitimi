@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {Button} from 'react-native';
-
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -35,19 +33,7 @@ const App = () => {
 						headerTitle: (props) => <HeaderLogo />,
 					}}
 				/>
-				<Stack.Screen
-					name="Comments"
-					component={CommentsScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => alert('This is a button!')}
-								title="Add"
-								color="#fff"
-							/>
-						),
-					}}
-				/>
+				<Stack.Screen name="Comments" component={CommentsScreen} />
 				<Stack.Screen
 					name="CommentDetail"
 					component={CommentDetailScreen}

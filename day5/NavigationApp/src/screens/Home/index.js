@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-	StyleSheet,
-	Text,
-	View,
-	TouchableOpacity,
-	NativeModules,
-	Platform,
-} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 import LottieView from 'lottie-react-native';
 
