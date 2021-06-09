@@ -10,8 +10,8 @@ export const allMessages = {
 		"app.header": "Header area",
 	},
 	"de-DE": {
-		"app.title": "Hellö worlda",
-		"app.description": "Have {count} packages",
-		"app.header": "Heada ar",
+		"app.title": "Hallo Welt",
+		"app.description": "Du hast {count} neue Nachrichten",
+		"app.header": "Kopfbereich",
 	},
 };
